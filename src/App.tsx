@@ -12,26 +12,26 @@ import { Gallery } from './Components/Gallery';
 import { Testimonials } from './Components/Testimonials';
 import { Team } from './Components/Team';
 import { Services } from './Components/Services';
+import { ImgCarousel } from './Components/Carousel';
 
 
 
 
 
 function App() {
-
-
   const [pageData, setPageData] = useState({});//pageData== vetor, 
                                               // setPageData == funcão para carregar o vetor
-
   useEffect(() => {//recebe como primeiro parâmetro uma função 
                    // que será executada assim que o componente renderizar.
     setPageData(JsonData);
   }, []);
  
   return (
-   
+
+
     <div>
       <Navigation/>
+      <ImgCarousel />
       <Home />
       <Features />
       <Services />
@@ -40,16 +40,12 @@ function App() {
       <Testimonials/>
       <Team />
       <Contact />
-      
-
-
     </div>
     
+
+    /* <ImgCarousel /> */
+  
     
-
-
-
-   
   )
 }
 

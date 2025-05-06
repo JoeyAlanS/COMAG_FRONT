@@ -1,183 +1,211 @@
-import { Container, Row, Col,Form,Button} from 'react-bootstrap';
-import{ChangeEvent, useState,useRef} from "react";
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { ChangeEvent, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook,faTwitter,faYoutube } from "@fortawesome/free-brands-svg-icons"
-import {faMapMarker,faPhone,faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import emailjs from '@emailjs/browser';
-import {default as JsonData} from "../data/data.json";
+import { faWhatsapp, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faMapMarker, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 const initialState = {
-    name: '',
-    email: '',
-    message: '',
-  }
+  name: '',
+  phone: '',
+  city: '',
+  state: '',
+  email: '',
+  subject: '',
+  company: '',
+  message: '',
+};
+const linkStyle= {
+  textDecoration: 'none',
+};
 
 
-export function Contact()
-{
+export function Contact() {
+  const [fields, setFieldsState] = useState(initialState);
 
-    const [{ name, email, message }, setFieldsState] = useState(initialState)
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFieldsState((prevState) => ({ ...prevState, [name]: value }));
+  };
 
-    const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target
-        setFieldsState((prevState) => ({ ...prevState, [name]: value }))
-      }
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(fields);
+    // Add email sending logic here
+    setFieldsState(initialState);
+  };
 
-
-    const clearState = () => setFieldsState({ ...initialState })// os tres pontinhos 
-                                                                //atualiza o valor corrente
-                                                                // para os valor4s de inicial state
-    
-    const handleSubmit = (e:any) => {
-      const form = useRef();
-      e.preventDefault()
-      console.log(name, email, message)
-      emailjs.
-      sendForm(
-        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID').
-        then((result) => {console.log(result.text); clearState()},
-        (error) => {console.log(error.text)})}
-    return(
-         
-        <div>
-        <div id='contact'>
-         <Container >
-         <Row>
+  return (
+    <div>
+      <div id="contact">
+        <Container>
+          <Row className="align-items-center">
             <Col md={8}>
-               <Row>
-                <div className='section-title'>
-                  <h2>Get In Touch</h2>
-                  <p>
-                    Please fill out the form below to send us an email and we will
-                    get back to you as soon as possible.
-                  </p>
-                </div>
-                <Form onSubmit={handleSubmit} id="myForm">
-                   <Row>
-                     <Col md={6}>
-                     <Form.Group>
-                        
-                           <Form.Control
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                required
-								value={name}
-                                onChange={handleChange}
-                                />
-                        <p className='help-block text-danger'></p>
-                        </Form.Group>
-                    </Col>
-                    <Col md={6}>
-                     <Form.Group>
-
-                     <Form.Control 
-                       type="email" 
-					   name ="email"
-					   value={email}
-                       placeholder="name@example.com"
-                       onChange={handleChange}
+              <div className="section-title">
+                <h2>Solicite seu orçamento</h2>
+              </div>
+              <Form onSubmit={handleSubmit}>
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Control
+                        type="text"
+                        name="name"
+                        placeholder="Nome"
+                        value={fields.name}
+                        onChange={handleChange}
+                        required
                       />
-
-                        <p className='help-block text-danger'></p>
-                     </Form.Group>
-                    </Col>
-                    </Row>
-                    <Form.Group>
-                    <Form.Control as="textarea"
-                     id='message'
-					 name = "message"
-                     rows={4} 
-					 value={message}
-                     onChange={handleChange}
-                     />
-                
-                    <p className='help-block text-danger'></p>
                     </Form.Group>
-                  <div id='success'></div>
-                  <Button as="input" type="submit" 
-				  size="lg"
-				   onClick={(e) => handleSubmit(e)}
-				  />{' '}
-                 
-                  </Form>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Control
+                        type="text"
+                        name="phone"
+                        placeholder="Telefone"
+                        value={fields.phone}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
                 </Row>
-              </Col>
-           
-              <Col md={3}>
-              <div className='contact-item'>
-                <h3>Contact Info</h3>
-                <p>
-                  <span>
-                  
-                    <FontAwesomeIcon icon={faMapMarker} style={{ color: 'white' }} />
-                    {" "}
-                     Address
-                  </span>
-                  {JsonData ? JsonData.Contact.address : 'loading'}
-                </p>
-              </div>
-              <div className='contact-item'>
-                <p>
-                  <span>
-                
-                    <FontAwesomeIcon icon={faPhone} style={{ color: 'white' }} />
-                    {" "}
-                     Phone
-                  </span>{' '}
-                  {JsonData ? JsonData.Contact.phone: 'loading'}
-                </p>
-              </div>
-              <div className='contact-item'>
-                <p>
-                  <span>
-                    <FontAwesomeIcon icon={faEnvelope} style={{ color: 'white' }} />
-                    {" "}
-                     Email
-                  </span>{' '}
-                  {JsonData ? JsonData.Contact.email : 'loading'}
-                </p>
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Control
+                        type="text"
+                        name="city"
+                        placeholder="Coloque sua Cidade"
+                        value={fields.city}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Control
+                        type="text"
+                        name="state"
+                        placeholder="Estado"
+                        value={fields.state}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Control
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={fields.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group>
+                      <Form.Control
+                        type="text"
+                        name="subject"
+                        placeholder="Assunto"
+                        value={fields.subject}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={6}>
+                    <Form.Group>
+                      <Form.Control
+                        type="text"
+                        name="company"
+                        placeholder="Nome da Empresa"
+                        value={fields.company}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group>
+                      <Form.Control
+                        as="textarea"
+                        name="message"
+                        placeholder="Mensagem"
+                        rows={1}
+                        value={fields.message}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Button type="submit" className="btn btn-primary btn-block mt-3">
+                  Enviar Mensagem
+                </Button>
+              </Form>
+            </Col>
+            <Col md={4}>
+              <div className="contact-item">
+                <ul>
+                  <li>
+                    <a href="https://wa.me/5585991499829" target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                      <FontAwesomeIcon icon={faWhatsapp} /> Enviar WhatsApp
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+5585991499829" style={linkStyle}>
+                      <FontAwesomeIcon icon={faPhone} /> (85) 99149-9829
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                      <FontAwesomeIcon icon={faFacebook} /> Página do Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com/comag.compressores" target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                      <FontAwesomeIcon icon={faInstagram} /> comag.compressores
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:consul.barbosa@hotmail.com" style={linkStyle}>
+                      <FontAwesomeIcon icon={faEnvelope} /> consul.barbosa@hotmail.com
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.google.com/maps?q=Avenida+Governador+Raul+Barbosa,+6294,+Aerolândia+-+Fortaleza/CE" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      style={linkStyle}
+                    >
+                      <FontAwesomeIcon icon={faMapMarker} /> Avenida Governador Raul Barbosa, 6294, Aerolândia - Fortaleza/CE
+                    </a>
+                  </li>
+                </ul>
               </div>
             </Col>
-            </Row>
-            <div className='col-md-12'>
-              <div className='row'>
-                <div className='social'>
-                  <ul>
-                    <li>
-                      <a href={JsonData  ? JsonData.Contact.facebook : '/'}>
-                      <FontAwesomeIcon icon={faFacebook} style={{ color: 'white',fontSize:'42px' }} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href={JsonData  ?JsonData.Contact.twitter : '/'}>
-                     
-                        <FontAwesomeIcon icon={faTwitter} style={{ color: 'white',fontSize:'42px' }} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href={JsonData  ? JsonData.Contact.youtube : '/'}>
-                      <FontAwesomeIcon icon={faYoutube} style={{ color: 'white',fontSize:'42px'}} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            </Container>
-       
-       
+          </Row>
+        </Container>
       </div>
-      <div id='footer'>
-          <div className='container text-center'>
-            <p>
-              &copy; 2022 Sebastião Lucio React Land Page Template. Design by{' '}
-              <a href='https://github.com/rio3dstudios' rel='nofollow'>
-                Rio 3D Studios
-              </a>
-            </p>
-          </div>
+      <div id="footer">
+        <div className="container text-center">
+          <p>
+            COPYRIGHTS COMAG.COM. TODOS OS DIREITOS RESERVADOS
+          </p>
         </div>
       </div>
-    )
+    </div>
+  );
 }

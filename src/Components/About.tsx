@@ -4,11 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import {default as JsonData} from "../data/data.json";
 
-
 export function About()
 {
     return(
-       
         <div id="about">
         <Container >
           <Row>
