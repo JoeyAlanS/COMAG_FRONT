@@ -171,8 +171,8 @@ export function Contact()
       <div id='footer'>
           <div className='container text-center'>
             <p>
-              &copy; 2022 Sebastião Lucio React Land Page Template. Design by{' '}
-              <a href='https://github.com/rio3dstudios' rel='nofollow'>
+            COMAG
+              <a href='https://github.com/JoeyAlanS/COMAG_FRONT.git' rel='nofollow'>
                 Rio 3D Studios
               </a>
             </p>
