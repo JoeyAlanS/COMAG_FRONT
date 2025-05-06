@@ -3,6 +3,7 @@
     "title": "We are a Landing Page",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
+
     "About": {
       "paragraph": "Desde a sua fundação em 2002, a COMAG tem se especializado em oferecer soluções no varejo de compressores e na manutenção de equipamentos de ar comprimido. Com a missão de proporcionar um atendimento de excelência, seguimos investindo e aprimorando nossos serviços até nos tornarmos assistência autorizada da Schulz Compressores, líder de mercado. Assim, garantimos um atendimento de alta qualidade e um suporte pós-venda que atende às necessidades de quem nos busca. O compromisso com a satisfação do cliente é máxima para nós, por isso oferecemos condições de pagamento acessíveis, sempre buscando condições que se ajustem a nossos clientes, garantindo as melhores opções para seu orçamento.",
       "images": [
@@ -17,7 +18,15 @@
           "smallImage": "img/about/schulz.png"
         }
       ]
+
     },
+    {
+      "title": "Sobre a Empresa 2",
+      "largeImage": "img/about/schulz.png",
+      "smallImage": "img/about/schulz.png"
+    }
+  ]
+},
 	 "Contact": {
     "address": "4321 California St, San Francisco, CA 12345 ",
     "phone": "+1 123 456 1234",
@@ -152,36 +161,32 @@
       "job": "Project Manager"
     }
   ],
-  "Services": [
-    {
-      "icon": "faWordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "faCartArrowDown",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "faCloudDownload",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "faLanguage",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "faPlane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "faPieChart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    }
-  ]
+"Services": [
+  {
+    "image": "tubulacoes.jpg",
+    "name": "Venda de Tubulações",
+    "text": "Oferecemos tubos industriais de alta qualidade para aplicações em ar comprimido, hidráulica e mais."
+  },
+  {
+    "image": "assessoria.jpg",
+    "name": "Assessoria Técnica",
+    "text": "Especialistas prontos para orientar projetos e instalações com eficiência e segurança."
+  },
+  {
+    "image": "instalacao-redes-ar.jpg",
+    "name": "Instalação de Redes de Ar",
+    "text": "Projetamos e instalamos redes de ar comprimido para máximo desempenho e economia."
+  },
+  {
+    "image": "manutencao-bombas.jpg",
+    "name": "Manutenção de Bombas",
+    "text": "Serviços completos de manutenção preventiva e corretiva em bombas industriais."
+  },
+  {
+    "image": "pecas-compressores.jpg",
+    "name": "Peças para Compressores",
+    "text": "Distribuímos peças originais e compatíveis para os principais modelos de compressores."
+  }
+]
+
 }

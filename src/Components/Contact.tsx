@@ -199,11 +199,15 @@ export function Contact() {
           </Row>
         </Container>
       </div>
-      <div id="footer">
-        <div className="container text-center">
-          <p>
-            COPYRIGHTS COMAG.COM. TODOS OS DIREITOS RESERVADOS
-          </p>
+
+      <div id='footer'>
+          <div className='container text-center'>
+            <p>
+            COMAG
+              <a href='https://github.com/JoeyAlanS/COMAG_FRONT.git' rel='nofollow'>
+                Rio 3D Studios
+              </a>
+            </p>
         </div>
       </div>
     </div>
