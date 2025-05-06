@@ -3,13 +3,22 @@
     "title": "We are a Landing Page",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
-"About": {
-  "paragraph": "Desde a sua fundação em 2002, a COMAG tem se especializado em oferecer soluções no varejo de compressores e na manutenção de equipamentos de ar comprimido. Com a missão de proporcionar um atendimento de excelência, seguimos investindo e aprimorando nossos serviços até nos tornarmos assistência autorizada da Schulz Compressores, líder de mercado. Assim, garantimos um atendimento de alta qualidade e um suporte pós-venda que atende às necessidades de quem nos busca. O compromisso com a satisfação do cliente é máxima para nós, por isso oferecemos condições de pagamento acessíveis, sempre buscando condições que se ajustem a nossos clientes, garantindo as melhores opções para seu orçamento.",
-  "images": [
-    {
-      "title": "Sobre a Empresa",
-      "largeImage": "img/about/comag_claro.svg",
-      "smallImage": "img/about/comag_claro.svg"
+
+    "About": {
+      "paragraph": "Desde a sua fundação em 2002, a COMAG tem se especializado em oferecer soluções no varejo de compressores e na manutenção de equipamentos de ar comprimido. Com a missão de proporcionar um atendimento de excelência, seguimos investindo e aprimorando nossos serviços até nos tornarmos assistência autorizada da Schulz Compressores, líder de mercado. Assim, garantimos um atendimento de alta qualidade e um suporte pós-venda que atende às necessidades de quem nos busca. O compromisso com a satisfação do cliente é máxima para nós, por isso oferecemos condições de pagamento acessíveis, sempre buscando condições que se ajustem a nossos clientes, garantindo as melhores opções para seu orçamento.",
+      "images": [
+        {
+          "title": "Sobre a Empresa",
+          "largeImage": "img/about/comag_claro.svg",
+          "smallImage": "img/about/comag_claro.svg"
+        },
+        {
+          "title": "Sobre a Empresa 2",
+          "largeImage": "img/about/schulz.png",
+          "smallImage": "img/about/schulz.png"
+        }
+      ]
+
     },
     {
       "title": "Sobre a Empresa 2",
