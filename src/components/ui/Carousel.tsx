@@ -7,7 +7,7 @@ export function ImgCarousel() {
     <>
     <Carousel
     className={imageClassName}
-    style = {{marginTop:"100px", height:"0px"}}>
+    style = {{marginTop:"100px"}}>
       <Carousel.Item>
       <SlideImage text="primeiro" />
         <Carousel.Caption>
