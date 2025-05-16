@@ -63,12 +63,17 @@ export function Navigation() {
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/about" className="nav-links">
+                  <Nav.Link as={Link} to="/sobre" className="nav-links">
+                    Sobre
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/contatos" className="nav-links">
                     Contatos
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/gallery" className="nav-links">
+                  <Nav.Link as={Link} to="/duvidas" className="nav-links">
                     Dúvidas
                   </Nav.Link>
                 </Nav.Item>

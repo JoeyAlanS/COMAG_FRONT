@@ -1,19 +1,19 @@
 import { Container, Row, Col, Ratio, Image } from 'react-bootstrap';
 import { default as JsonData } from "../data/data.json";
 
-export function About() {
+export function Sobre() {
   return (
-    <div id="about" className="py-5 bg-light">
+    <div id="sobre" className="py-5 bg-light">
       <Container>
         <Row className="align-items-start">
           {/* Texto + Imagens */}
           <Col xs={12} md={6}>
             <h2 className="text-primary mb-4">Sobre Nós</h2>
-            <p>{JsonData?.About?.paragraph || "loading..."}</p>
+            <p>{JsonData?.Sobre?.paragraph || "loading..."}</p>
 
             {/* Imagens abaixo do texto */}
             <Row className="mt-4 g-2">
-              {JsonData?.About?.images?.map((img, index) => (
+              {JsonData?.Sobre?.images?.map((img, index) => (
                 <Col xs={6} key={index} className="d-flex justify-content-center align-items-center">
                   <div style={{ height: '80px', width: '100%', maxWidth: '150px' }}>
                     <Image

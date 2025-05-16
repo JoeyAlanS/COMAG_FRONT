@@ -4,7 +4,7 @@
     "paragraph": "Compressores a pistão, lavadoras, redes de ar e mais."
   },
 
-    "About": {
+    "Sobre": {
       "paragraph": "Desde a sua fundação em 2002, a COMAG tem se especializado em oferecer soluções no varejo de compressores e na manutenção de equipamentos de ar comprimido. Com a missão de proporcionar um atendimento de excelência, seguimos investindo e aprimorando nossos serviços até nos tornarmos assistência autorizada da Schulz Compressores, líder de mercado. Assim, garantimos um atendimento de alta qualidade e um suporte pós-venda que atende às necessidades de quem nos busca. O compromisso com a satisfação do cliente é máxima para nós, por isso oferecemos condições de pagamento acessíveis, sempre buscando condições que se ajustem a nossos clientes, garantindo as melhores opções para seu orçamento.",
       "images": [
         {
@@ -21,7 +21,7 @@
 
     },
 
-	 "Contact": {
+	 "Contato": {
     "address": "4321 California St, San Francisco, CA 12345 ",
     "phone": "+1 123 456 1234",
     "email": "info@company.com",
@@ -54,7 +54,7 @@
     }
   ],
 
-  "Gallery": [
+  "Duvidas": [
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/01-large.jpg",

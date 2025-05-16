@@ -20,7 +20,7 @@ const linkStyle= {
 };
 
 
-export function Contact() {
+export function Contatos() {
   const [fields, setFieldsState] = useState(initialState);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,7 +37,7 @@ export function Contact() {
 
   return (
     <div>
-      <div id="contact">
+      <div id="contato">
         <Container>
           <Row className="align-items-center">
             <Col md={8}>
@@ -156,7 +156,7 @@ export function Contact() {
               </Form>
             </Col>
             <Col md={4}>
-              <div className="contact-item">
+              <div className="contato-item">
                 <ul>
                   <li>
                     <a href="https://wa.me/5585991499829" target="_blank" rel="noopener noreferrer" style={linkStyle}>
