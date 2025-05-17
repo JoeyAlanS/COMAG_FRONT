@@ -17,7 +17,7 @@ export function Image(props: ImageProps)
         <a
           href={props.largeImage}
           title={props.title}
-          data-lightbox-gallery='gallery1'
+          data-lightbox-duvidas='gallery1'
         >
           <div className='hover-text'>
             <h4>{props.title}</h4>
