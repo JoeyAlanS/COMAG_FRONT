@@ -53,13 +53,13 @@ export function Navigation() {
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/features" className="nav-links">
-                    Serviços
+                  <Nav.Link as={Link} to="/produtos" className="nav-links">
+                    Produtos
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/services" className="nav-links">
-                    Produtos
+                  <Nav.Link as={Link} to="/servicos" className="nav-links">
+                    Serviços
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
