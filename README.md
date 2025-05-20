@@ -21,7 +21,9 @@ cd react-vite-landing-page
 
 # install dependencies
 npm install
-
+npm install react-router-dom
+npm install --save-dev @types/node
+npm install react-router-dom react-bootstrap bootstrap axios
 
 # start the application
 npm run dev
