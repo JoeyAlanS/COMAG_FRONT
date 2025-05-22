@@ -196,15 +196,11 @@ export function Produtos() {
                   <div className="ratio ratio-16x9">
                     <Card.Img
                       variant="top"
-<<<<<<< Updated upstream
                       src={
                         product.image.startsWith('data:image') // Check if it's a base64 string
                           ? product.image // Use the base64 string directly
                           : `/img/produtos/${product.image}` // Otherwise, use the image path
                       }
-=======
-                      src={product.image || '/img/produtos/default-product.jpg'}
->>>>>>> Stashed changes
                       alt={product.name}
                       style={{ objectFit: 'cover' }}
                     />
