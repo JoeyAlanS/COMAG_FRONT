@@ -28,7 +28,7 @@ export function Home()
                   </p>
                   <Link
                     to="/servicos"
-                    className="btn btn-custom btn-lg page-scroll"
+                    className="btn btn-outline-light btn-lg page-scroll"
                   >
                     Conheça nossos serviços
                   </Link>{' '}

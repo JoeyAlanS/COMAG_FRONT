@@ -3,6 +3,7 @@ import {default as JsonData} from "../data/data.json";
 import Accordion from "react-bootstrap/Accordion";
 import { Team } from "./Team";
 import { Testemunhos } from "./Testemunhos";
+import Downloads from "./Downloads";
 
 export function Duvidas() {
   return (
@@ -17,7 +18,6 @@ export function Duvidas() {
              Perguntas Frequentes (FAQ) 
           </h2>
         </Container>
-
         </Col>
         <Accordion>
         {JsonData && JsonData.Duvidas.length > 0 ? (
@@ -40,6 +40,7 @@ export function Duvidas() {
       </Row>
     </Container>
     <Testemunhos/>
+    <Downloads/>
 
     </>
   );
