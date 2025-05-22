@@ -3,7 +3,7 @@ import App from "./App";
 import { Home } from "./components/Home";
 import { Sobre } from "./components/Sobre";
 import { Contatos } from "./components/Contatos";
-import { Features } from "./components/Features";
+import { Features } from "./components/Apresentacao";
 import { Duvidas } from "./components/Duvidas";
 import { Servicos } from "./components/Servicos";
 import { Produtos } from "./components/Produtos";

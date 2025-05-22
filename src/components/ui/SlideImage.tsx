@@ -4,8 +4,6 @@ interface SlideImageProps {
   text: string;
 }
 
-//Entender!!!
-
 const SlideImage: React.FC<SlideImageProps> = ({ text }) => {
   const slideNumber = {
     "primeiro": 1,

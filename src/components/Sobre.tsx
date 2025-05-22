@@ -1,8 +1,11 @@
 import { Container, Row, Col, Ratio, Image } from 'react-bootstrap';
 import { default as JsonData } from "../data/data.json";
+import { Team } from './Team';
 
 export function Sobre() {
   return (
+    <>
+    <Team/>
     <div id="sobre" className="py-5 bg-light">
       <Container>
         <Row className="align-items-start">
@@ -47,6 +50,8 @@ export function Sobre() {
         </Row>
       </Container>
     </div>
+
+    </>
   );
 
 }

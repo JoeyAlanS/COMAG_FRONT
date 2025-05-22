@@ -129,9 +129,13 @@ export function Produtos() {
               <Col key={product.id}>
                 <Card className="h-100 shadow-sm border-0">
                   <div className="ratio ratio-16x9">
-                    <Card.Img 
-                      variant="top" 
-                      src={product.image || '/img/produtos/default-product.jpg'}
+                    <Card.Img
+                      variant="top"
+                      src={
+                        product.image.startsWith('data:image') // Check if it's a base64 string
+                          ? product.image // Use the base64 string directly
+                          : `/img/produtos/${product.image}` // Otherwise, use the image path
+                      }
                       alt={product.name}
                       style={{ objectFit: 'cover' }}
                     />
@@ -148,8 +152,8 @@ export function Produtos() {
                       {product.description}
                     </Card.Text>
                     <div className="d-grid mt-3">
-                      <Link 
-                        to="/contatos" 
+                      <Link
+                        to="/contatos"
                         state={{ product: product.name }}
                         className="btn btn-primary btn-sm"
                       >

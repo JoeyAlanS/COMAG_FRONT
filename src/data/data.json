@@ -30,109 +30,58 @@
     "youtube": "youtube.com"
   },
 
-  "Features": [
-    {
-      "icon": "faComment",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      
-      "icon": "faBullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "faGroupArrowsRotate",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "faMagic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    }
-  ],
-
+    "ServicosHome": [
+      {
+        "icon": "faToolbox",
+        "title": "Manutenção de Compressores: Preventiva e Corretiva",
+        "text": "Garantimos o perfeito funcionamento do seu compressor com serviços de manutenção preventiva e corretiva, aumentando sua vida útil e evitando paradas inesperadas."
+      },
+      {
+        "icon": "faHammer",
+        "title": "Assistência Técnica Autorizada Schulz",
+        "text": "Somos assistência técnica autorizada Schulz, com peças originais e profissionais especializados para garantir a máxima performance e segurança dos seus compressores."
+      },
+      {
+        "icon": "faWind",
+        "title": "Instalação de Redes de Ar e Tubulações",
+        "text": "Projetamos e instalamos redes de ar comprimido e tubulações com eficiência e segurança, adequadas às necessidades da sua empresa e conforme as normas técnicas."
+      },
+      {
+        "icon": "faHeadset",
+        "title": "Suporte Técnico Remoto Especializado",
+        "text": "Conte com nossa equipe para suporte técnico remoto, orientação rápida e eficaz para resolver dúvidas, ajustes ou problemas no seu sistema de ar comprimido."
+      }
+    ],
+  
   "Duvidas": [
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
+      "title": "Duvida 1",
+      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
+      "title": "Duvida 2",
+      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
+      "title": "Duvida 3",
+      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
-    },
+      "title": "Duvida 4",
+      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+    ,
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
-    },
+      "title": "Duvida 5",
+      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+    ,
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "title": "Duvida 6",
+      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ],
-  "Testimonials": [
-    {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    }
-  ],
+ 
   "Team": [
     {
       "img": "img/team/01.jpg",
@@ -181,6 +130,111 @@
     "name": "Peças para Compressores",
     "text": "Distribuímos peças originais e compatíveis para os principais modelos de compressores."
   }
-]
-
+],
+"Footer": {
+    "title": "COMAG Compressores",
+    "subtitle": "Soluções em Ar Comprimido",
+    "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+},
+"Testemunhos": [
+    {
+      "img": "img/testimonials/01.png",
+      "text": "Ótimo atendimento e excelentes preços.",
+      "name": "Paulo Miranda"
+    },
+    {
+      "img": "img/testimonials/02.png",
+      "text": "Honestidade nos serviços",
+      "name": "Defenza Blindagens"
+    },
+    {
+      "img": "img/testimonials/03.png",
+      "text": "Precisou de peças para compressores!? Lá não falta. Fui atendido por pessoas muito boas e que sabem fazer negocio!",
+      "name": "Thiago Marinho"
+    },
+    {
+      "img": "img/testimonials/04.png",
+      "text": "Excelente atendimento e serviço profissional. Todas as peças que precisei encontrei aqui. Preço justo.",
+      "name": "NITEK Engenharia"
+    },
+    {
+      "img": "img/testimonials/05.png",
+      "text": "Excelente atendimento, profissionais top.",
+      "name": "Rogério Martins"
+    },
+    {
+      "img": "img/testimonials/06.png",
+      "text": "Atendimento excelente. Vendedora muito atenciosa. Resolveram meu problema rapidamente.",
+      "name": "Brauno Alves"
+    }
+  ],
+  "Gallery": [
+    {
+      "title": "CSI 6,6 Pratiko",
+      "largeImage": "img/portfolio/01-large.png",
+      "smallImage": "img/portfolio/01-small.png"
+    },
+    {
+      "title": "PRO CSV 10",
+      "largeImage": "img/portfolio/02-large.png",
+      "smallImage": "img/portfolio/02-small.png"
+    },
+    {
+      "title": "AUDAZ MCSV 20",
+      "largeImage": "img/portfolio/03-large.png",
+      "smallImage": "img/portfolio/03-small.png"
+    },
+    {
+      "title": "BRAVO CSL 15",
+      "largeImage": "img/portfolio/04-large.png",
+      "smallImage": "img/portfolio/04-small.png"
+    },
+    {
+      "title": "MAX MSV 20",
+      "largeImage": "img/portfolio/05-large.png",
+      "smallImage": "img/portfolio/05-small.png"
+    },
+    {
+      "title": "BRAVO CSL 20",
+      "largeImage": "img/portfolio/06-large.png",
+      "smallImage": "img/portfolio/06-small.png"
+    },
+    {
+      "title": "FORT MSWV 60",
+      "largeImage": "img/portfolio/07-large.png",
+      "smallImage": "img/portfolio/07-small.png"
+    },
+    {
+      "title": "SOMAR LUS LAVADORA",
+      "largeImage": "img/portfolio/08-large.png",
+      "smallImage": "img/portfolio/08-small.png"
+    },
+    {
+      "title": "SOMAR HU LAVADORA",
+      "largeImage": "img/portfolio/09-large.png",
+      "smallImage": "img/portfolio/09-small.png"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ]
 }
