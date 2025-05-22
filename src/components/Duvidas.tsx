@@ -9,7 +9,7 @@ export function Duvidas() {
     <>
 
     <Container>
-      <Row className="justify-content-md-center pt-5">
+      <Row className="justify-content-md-center py-5">
       <Col xs lg="10">
         <Col md={{span:8, offset:2}} className=' section-title'>
         <Container className="d-flex justify-content-center align-items-center">

@@ -8,7 +8,7 @@ import { Testemunhos } from './Testemunhos';
 import { Gallery } from './Gallery';
 import { Team } from './Team';
 import React from 'react';
-import ProductDetails from './ProductDetails';
+
 
 export function Home()
 {
@@ -19,14 +19,16 @@ export function Home()
             <Container>
               <Row>
                 <Col md={{ span: 8, offset: 2 }} className=' intro-text'>
-                  <h1>
+                  <h1 className="animate__animated animate__fadeInDown">
                     {JsonData ? JsonData.Header.title : 'Loading'}
                     <span></span>
                   </h1>
-                  <p>{JsonData ? JsonData.Header.paragraph : 'Loading'}</p>
+                  <p className="animate__animated animate__fadeInUp">
+                    {JsonData ? JsonData.Header.paragraph : 'Loading'}
+                  </p>
                   <Link
                     to="/servicos"
-                    className='btn btn-custom btn-lg page-scroll'
+                    className="btn btn-custom btn-lg page-scroll"
                   >
                     Conheça nossos serviços
                   </Link>{' '}

@@ -74,7 +74,7 @@ export function Servicos() {
                 <Card.Body className="d-flex flex-column">
                   <Card.Title className="fs-4">{service.name}</Card.Title>
                   <Card.Subtitle className="mb-3 text-primary fw-bold">
-                    R$ {service.price.toFixed(2)}
+                    <span className="text-secondary">A partir de</span> R${service.price.toFixed(2)}
                     {service.duration && <span className="text-muted"> • {service.duration}</span>}
                   </Card.Subtitle>
                   <Card.Text className="flex-grow-1 text-muted">

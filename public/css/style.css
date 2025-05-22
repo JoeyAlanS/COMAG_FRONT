@@ -425,9 +425,9 @@ html {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     transition: all 0.3s;
-    font-size: 18px;
+    font-size: 30px;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: bold;
     text-transform: uppercase;
   }
   .hover-bg:hover .hover-text > h4 {
