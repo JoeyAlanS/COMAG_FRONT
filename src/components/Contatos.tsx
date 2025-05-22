@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Alert, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -7,7 +7,6 @@ import {
 import { 
   faMapMarker, faPhone, faEnvelope 
 } from '@fortawesome/free-solid-svg-icons';
-import { apiService } from '../services/api';
 import { useLocation } from 'react-router-dom';
 
 interface FormFields {
@@ -40,94 +39,107 @@ export function Contatos() {
     message: ''
   });
 
+  const [formValid, setFormValid] = useState(false);
+
+  useEffect(() => {
+    setFormValid(validateForm());
+  }, [fields]);
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFields(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setStatus({ loading: true, success: false, message: '' });
-
-    try {
-      await apiService.createBudget({
-        nome: fields.name,
-        email: fields.email,
-        telefone: fields.phone,
-        nomeEmpresa: fields.company,
-        sedeEmpresa: `${fields.city}, ${fields.state}`,
-        equipamento: fields.subject,
-        data: new Date().toISOString(),
-        mensagem: fields.message
-      });
-
-      setStatus({
-        loading: false,
-        success: true,
-        message: 'Orçamento enviado com sucesso! Em breve entraremos em contato.'
-      });
-      setFields({
-        name: '',
-        phone: '',
-        email: '',
-        city: '',
-        state: '',
-        company: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
+    
+    if (!formValid) {
       setStatus({
         loading: false,
         success: false,
-        message: error instanceof Error ? error.message : 'Erro ao enviar formulário'
+        message: 'Por favor, preencha todos os campos corretamente'
       });
+      return;
     }
+
+    setStatus({ loading: true, success: false, message: '' });
+
+    // Monta o corpo do email
+    const emailBody = `
+      Nome: ${fields.name}
+      Telefone: ${fields.phone}
+      Email: ${fields.email}
+      Empresa: ${fields.company}
+      Cidade/Estado: ${fields.city}, ${fields.state}
+      Assunto: ${fields.subject}
+      Mensagem: ${fields.message}
+      
+      ---
+      Mensagem enviada através do site COMAG
+    `;
+
+    // Codifica o conteúdo para URL
+    const encodedBody = encodeURIComponent(emailBody);
+    const encodedSubject = encodeURIComponent(`Novo contato: ${fields.subject}`);
+
+    // Abre o cliente de email padrão
+    window.location.href = `mailto:consul.barbosa@hotmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+
+    setStatus({
+      loading: false,
+      success: true,
+      message: 'Abrindo seu cliente de email...'
+    });
+
+    // Limpa o formulário
+    setFields({
+      name: '',
+      phone: '',
+      email: '',
+      city: '',
+      state: '',
+      company: '',
+      subject: '',
+      message: ''
+    });
   };
 
-const validateForm = () => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
-  
-  const phone = formatPhone(fields.phone);
-  
-return (
-    fields.name.trim().length >= 3 &&
-    phoneRegex.test(fields.phone) &&
-    emailRegex.test(fields.email) &&
-    fields.city.trim().length >= 3 &&
-    fields.state.trim().length === 2 &&
-    fields.company.trim().length >= 3 &&
-    fields.subject.trim().length >= 3
-  );
-};
+  const validateForm = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Regex simplificada para telefone brasileiro
+    const phoneRegex = /^[\d\s()-]{10,15}$/;
+    
+    return (
+      fields.name.trim().length >= 3 &&
+      phoneRegex.test(fields.phone) &&
+      emailRegex.test(fields.email) &&
+      fields.city.trim().length >= 3 &&
+      fields.state.trim().length === 2 &&
+      fields.company.trim().length >= 3 &&
+      fields.subject.trim().length >= 3
+    );
+  };
 
-  const formatPhone = (phone: string) => {
-  return phone.replace(/\D/g, '');
-};
-
-const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
-  let value = e.target.value.replace(/\D/g, '');
-  
-  // Limita a 11 dígitos (com DDD)
-  if (value.length > 11) {
-    value = value.substring(0, 11);
-  }
-  
-  // Formatação do telefone
-  let formattedValue = value;
-  if (value.length > 0) {
-    formattedValue = `(${value.substring(0, 2)}`;
-    if (value.length > 2) {
-      formattedValue += `) ${value.substring(2, 7)}`;
-      if (value.length > 7) {
-        formattedValue += `-${value.substring(7, 11)}`;
+  const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/\D/g, '');
+    
+    if (value.length > 11) {
+      value = value.substring(0, 11);
+    }
+    
+    let formattedValue = value;
+    if (value.length > 0) {
+      formattedValue = `(${value.substring(0, 2)}`;
+      if (value.length > 2) {
+        formattedValue += `) ${value.substring(2, 7)}`;
+        if (value.length > 7) {
+          formattedValue += `-${value.substring(7, 11)}`;
+        }
       }
     }
-  }
-  
-  setFields(prev => ({ ...prev, phone: formattedValue }));
-};
+    
+    setFields(prev => ({ ...prev, phone: formattedValue }));
+  };
 
   return (
     <Container className="py-5">
@@ -152,26 +164,31 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
                     value={fields.name}
                     onChange={handleChange}
                     required
+                    minLength={3}
                     disabled={status.loading}
+                    isInvalid={fields.name.length > 0 && fields.name.trim().length < 3}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Nome deve ter pelo menos 3 caracteres
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
               <Col md={6}>
                 <Form.Group className="mb-3">
                   <Form.Label>Telefone</Form.Label>
-                    <Form.Control
-                      type="tel"
-                      name="phone"
-                      value={fields.phone}
-                      onChange={handlePhoneChange}
-                      placeholder="(00) 00000-0000"
-                      required
-                      disabled={status.loading}
-                      isInvalid={!!fields.phone && !/^\(\d{2}\) \d{4,5}-\d{4}$/.test(fields.phone)}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Informe um telefone válido com DDD
-                    </Form.Control.Feedback>
+                  <Form.Control
+                    type="tel"
+                    name="phone"
+                    value={fields.phone}
+                    onChange={handlePhoneChange}
+                    placeholder="(00) 00000-0000"
+                    required
+                    disabled={status.loading}
+                    isInvalid={!!fields.phone && !/^[\d\s()-]{10,15}$/.test(fields.phone)}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Informe um telefone válido com DDD (ex: (85) 99149-9829)
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
             </Row>
@@ -187,7 +204,11 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
                     onChange={handleChange}
                     required
                     disabled={status.loading}
+                    isInvalid={!!fields.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Informe um email válido
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
               <Col md={6}>
@@ -199,8 +220,13 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
                     value={fields.company}
                     onChange={handleChange}
                     required
+                    minLength={3}
                     disabled={status.loading}
+                    isInvalid={fields.company.length > 0 && fields.company.trim().length < 3}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Nome da empresa deve ter pelo menos 3 caracteres
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
             </Row>
@@ -215,8 +241,13 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
                     value={fields.city}
                     onChange={handleChange}
                     required
+                    minLength={3}
                     disabled={status.loading}
+                    isInvalid={fields.city.length > 0 && fields.city.trim().length < 3}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Cidade deve ter pelo menos 3 caracteres
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
               <Col md={6}>
@@ -228,9 +259,14 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
                     value={fields.state}
                     onChange={handleChange}
                     maxLength={2}
+                    minLength={2}
                     required
                     disabled={status.loading}
+                    isInvalid={!!fields.state && fields.state.trim().length !== 2}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Informe a sigla do estado (2 caracteres)
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
             </Row>
@@ -243,8 +279,13 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
                 value={fields.subject}
                 onChange={handleChange}
                 required
+                minLength={3}
                 disabled={status.loading}
+                isInvalid={fields.subject.length > 0 && fields.subject.trim().length < 3}
               />
+              <Form.Control.Feedback type="invalid">
+                Assunto deve ter pelo menos 3 caracteres
+              </Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group className="mb-3">
@@ -263,7 +304,11 @@ const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
               type="submit"
               variant="primary"
               size="lg"
-              disabled={status.loading || !validateForm()}
+              disabled={status.loading || !formValid}
+              style={{
+                opacity: status.loading || !formValid ? 0.7 : 1,
+                cursor: status.loading || !formValid ? 'not-allowed' : 'pointer'
+              }}
             >
               {status.loading ? (
                 <>
