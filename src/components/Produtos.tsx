@@ -106,7 +106,7 @@ export function Produtos() {
       <Container>
         <div className="text-center mb-5">
           <h2>Nossos Produtos</h2>
-          <p className="lead">Encontre o equipamento ideal para sua empresa</p>
+          <p className="lead">Encontre o equipamento ideal para seu negócio!</p>
         </div>
 
         {/* Filtros */}

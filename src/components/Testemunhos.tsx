@@ -8,7 +8,7 @@ export function Testemunhos()
         <div id='testimonials'>
         <Container>
           <div className='section-title text-center'>
-            <h2>O que nossos clientes dizem:</h2>
+            <h2>O que nossos clientes dizem?</h2>
           </div>
           <Row>
             {JsonData

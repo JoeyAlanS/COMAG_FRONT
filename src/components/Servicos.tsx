@@ -60,9 +60,13 @@ export function Servicos() {
             <Col key={service.id}>
               <Card className="h-100 shadow-sm border-0">
                 <div className="ratio ratio-16x9">
-                  <Card.Img 
-                    variant="top" 
-                    src={service.image}
+                  <Card.Img
+                    variant="top"
+                    src={
+                      service.image.startsWith('data:image') // Check if it's a base64 string
+                        ? service.image // Use the base64 string directly
+                        : `/img/servicos/${service.image}` // Otherwise, use the image path
+                    }
                     alt={service.name}
                     style={{ objectFit: 'cover' }}
                   />
@@ -77,8 +81,8 @@ export function Servicos() {
                     {service.description}
                   </Card.Text>
                   <div className="d-grid mt-3">
-                    <Link 
-                      to="/contatos" 
+                    <Link
+                      to="/contatos"
                       state={{ service: service.name }}
                       className="btn btn-primary"
                     >

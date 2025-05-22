@@ -12,9 +12,10 @@ export function Gallery()
      <div id='portfolio' className='text-center'>
         <Container>
           <div className='section-title'>
-            <h2>PRONTA-ENTREGA</h2>
+            <h2 className="text-primary mb-4">PRONTA-ENTREGA
+            </h2>
             <p>
-             Produtos disponíveis para entrega imediata
+             Produtos disponíveis para entrega imediata  <i className="bi bi-truck"></i>
             </p>
           </div>
         

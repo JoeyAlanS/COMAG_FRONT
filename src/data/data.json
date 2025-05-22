@@ -55,53 +55,52 @@
   
   "Duvidas": [
     {
-      "title": "Duvida 1",
-      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "1. O que a COMAG oferece?",
+      "conteudo":"A COMAG se especializa no varejo de compressores e na manutenção de equipamentos de ar comprimido. Além disso, somos assistência técnica autorizada da Schulz Compressores, garantindo serviços de alta qualidade e suporte pós-venda especializado."
     },
     {
-      "title": "Duvida 2",
-      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "2. A COMAG é assistência autorizada? Como posso verificar essa informação?",
+      "conteudo":"Sim, somos assistência técnica autorizada da Schulz Compressores, líder de mercado. Isso nos permite oferecer atendimento técnico especializado e peças originais, assegurando a confiabilidade e a durabilidade dos equipamentos. Essa informação pode ser conferida na seguinte página: https://www.schulz.com.br/local/ce/fortaleza/. Busque por MARIA CONSUELO DA SILVA BARBOSA – ME, razão social (nome jurídico) da empresa"
     },
     {
-      "title": "Duvida 3",
-      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "3. Como é o atendimento da COMAG?",
+      "conteudo":"Nosso atendimento é pautado pela excelência e pelo compromisso com a satisfação do cliente. Investimos constantemente no aprimoramento dos serviços para oferecer soluções eficientes e suporte pós-venda de qualidade."
     },
     {
-      "title": "Duvida 4",
-      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "4. Posso utilizar meu compressor/lavadora como forma de pagamento?",
+      "conteudo":"Sim, aceitamos compressores antigos como parte do pagamento na compra de novos equipamentos. Essa é uma forma de facilitar a troca e modernização do seu sistema de ar comprimido, sempre com uma avaliação justa do equipamento usado."
     }
     ,
     {
-      "title": "Duvida 5",
-      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "5. A COMAG realiza instalação dos compressores?",
+      "conteudo":"Sim! Contamos com equipes especializadas para realizar a instalação de compressores. Em determinadas condições de compra, oferecemos esse serviço de forma gratuita, garantindo que o equipamento funcione corretamente e com total segurança."
     }
     ,
     {
-      "title": "Duvida 6",
-      "conteudo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "6. Quais são as vantagens de comprar um compressor novo com a COMAG?",
+      "conteudo":"Além de contar com produtos de alta qualidade e assistência autorizada Schulz, você pode aproveitar a possibilidade de utilizar seu compressor antigo como entrada, condições de pagamento facilitadas, instalação gratuita (em casos específicos) e um suporte técnico completo."
     }
   ],
- 
   "Team": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "img": "img/team/01.png",
+      "name": "Ecofor",
+      "job": ""
     },
     {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
+      "img": "img/team/02.png",
+      "name": "Colégio Christus",
+      "job": ""
     },
     {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
+      "img": "img/team/03.png",
+      "name": "Regence Renault",
+      "job": ""
     },
     {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "img": "img/team/04.png",
+      "name": "Cimento Apodi",
+      "job": ""
     }
   ],
 "Servicos": [
@@ -213,28 +212,6 @@
       "title": "SOMAR HU LAVADORA",
       "largeImage": "img/portfolio/09-large.png",
       "smallImage": "img/portfolio/09-small.png"
-    }
-  ],
-  "Team": [
-    {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
-    },
-    {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
     }
   ]
 }

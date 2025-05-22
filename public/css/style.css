@@ -497,6 +497,12 @@ html {
     padding: 10px 0 0;
     color: #888;
   }
+  /*Footer Section*/
+  .page-footer{
+    text-decoration: none;
+  }
+
+
   /* Contact Section */
   #contact {
     padding: 100px 0 60px;
