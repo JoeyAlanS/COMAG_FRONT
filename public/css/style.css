@@ -71,7 +71,6 @@ html {
   }
   /*Gallery */
 
-  
   .gallery-image img {
     width: 300px; /* Fixed width */
     height: 200px; /* Fixed height */
@@ -249,6 +248,8 @@ html {
     outline-offset: none;
   }
   /* Header Section */
+
+  
   .intro {
     left: 0;
     width: 100%;
@@ -500,6 +501,10 @@ html {
   /*Footer Section*/
   .page-footer{
     text-decoration: none;
+  }
+  .footer-link:hover {
+    color: #8CCFF3;
+    text-decoration: underline;
   }
 
 

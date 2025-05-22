@@ -4,12 +4,13 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export function Footer (): JSX.Element {
     return <footer className="page-footer font-small blue pt-4">
+          <hr className="mb-4 mt-0 w-100" style={{ borderColor: '#FFFFFF' }} />
     <div className="container-fluid ">
         <div className="row">
             <div className="col-md-6 mt-md-0 mt-3 text-center text-md-center">
-                <h5 className="text-uppercase">
+                <h3 className="text-uppercase fs-2">
                     {JsonData ? JsonData.Footer.title : 'Loading'}
-                    </h5>
+                    </h3>
                 <p> {JsonData ? JsonData.Footer.subtitle : 'Loading'}</p>
             </div>
 
@@ -48,7 +49,7 @@ export function Footer (): JSX.Element {
             </div>
         </div>
     </div>
-
+    <hr className="my-2 w-100" style={{ borderColor: '#FFFFFF' }} />
     <div className="footer-copyright text-center py-3">© 2025 Copyright:
         <a href="https://comagcompressores.com"> comagcompressores.com</a>
     </div>
